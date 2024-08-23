@@ -1,0 +1,15 @@
+<div class="align">
+<div class="country-selection-container">
+    <h1>Select a Country</h1>
+    
+    <div class="dropdown-container">
+      <label for="countries">Choose a country:</label>
+      <select id="countries" name="countries" [(ngModel)]="selectedCountry">
+        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+      </select>
+    </div>
+    
+    <button [routerLink]="['/hotels', selectedCountry]">Explore Hotels</button>
+  </div>
+</div>
+  

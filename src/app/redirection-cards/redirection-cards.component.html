@@ -1,0 +1,10 @@
+<div class="card-container">
+  <div class="card" *ngFor="let card of cards; let i = index" [ngClass]="{'left-aligned': i % 2 === 0, 'right-aligned': i === 1}">
+    <img [src]="card.image" alt="Card Image" />
+    <div style="white-space: pre-line" class="card-content">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+      <button (click)="navigateTo(card.link)">Learn More</button>
+    </div>
+  </div>
+</div>

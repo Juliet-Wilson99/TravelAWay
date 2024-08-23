@@ -1,0 +1,15 @@
+<div class="heading">Package Tours</div>
+<div class="package-tours-container">
+    <div class="package-card" *ngFor="let tour of tours">
+      <img [src]="tour.image" alt="{{tour.country}} Image" class="tour-image" />
+      <div class="tour-details">
+        <h3>{{ tour.country }}</h3>
+        <p><strong>Starting Date:</strong> {{ tour.startDate | date }}</p>
+        <p><strong>Duration:</strong> {{ tour.duration }} days / {{ tour.nights }} nights</p>
+        <p><strong>Locations Included:</strong> {{ tour.locations.join(', ') }}</p>
+        <p><strong>Price:</strong> ${{ tour.price }}</p>
+        <button [routerLink]="['/not-available']" (click)="bookTour(tour)" class="book-now-button">Book Now</button>
+      </div>
+    </div>
+  </div>
+  

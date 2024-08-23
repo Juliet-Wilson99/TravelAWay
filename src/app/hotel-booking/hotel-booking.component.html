@@ -1,0 +1,22 @@
+<div class="align">
+ <div class="booking-container">
+    <h2>{{ hotelName }}</h2>
+    <p>Price per night: ${{ price }}</p>
+  
+    <div class="calendar">
+      <label for="startDate">Start Date:</label>
+      <input style = "padding: 3px;" id="startDate" type="date" [formControl]="startDate">
+  
+      <label for="endDate">End Date:</label>
+      <input style = "padding: 3px;" id="endDate" type="date" [formControl]="endDate">
+    </div>
+  
+    <div class="total-price">
+      <h3>Total Price: ${{ totalPrice }}</h3>
+    </div>
+    <div>
+        <button [routerLink]="['/not-available']" class="book-button">Book Now</button>
+    </div>
+  </div>
+</div>
+  

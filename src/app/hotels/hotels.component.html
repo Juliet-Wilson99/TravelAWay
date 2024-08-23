@@ -1,0 +1,29 @@
+<div class = "hotels">
+  <div class="heading">Hotels</div>
+<div class="hotels-container">
+    <h1 class="heading">{{ countryName }}</h1>
+  
+    <div class="hotel-flex">
+    <div *ngFor="let hotel of hotels" class="hotel-card">
+      <div class="hotel-data">
+        <h2>{{ hotel.spot }}</h2>
+        <div class="hotel-details">
+          <p class="heading">{{ hotel.hotelName }}</p>
+          <p>Rating: {{ hotel.starRating }} star</p>
+          <p>Amenities: {{ hotel.facilities }}</p>
+          <p>Review Rating: {{ hotel.reviewRating }}/5</p>
+          <div class="star">
+            <span *ngFor="let star of getStars(hotel.reviewRating)" [innerHTML]="star"></span>
+          </div>
+          <p>Price per night: <strong>${{ hotel.priceUSD }} (₹{{ convertToINR(hotel.priceUSD) }})</strong></p>
+          <button [routerLink]="['/hotelBooking', hotel.hotelName, hotel.priceUSD]" class="book-button">Book hotel</button>
+        </div>
+      </div>
+      <div class="hotel-image">
+        <img [src]="hotel.image" alt="Image of {{ hotel.hotelName }}">
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="left">
+      <img src="assets/logo.png" alt="Company Logo" class="logo-image">
+      <span class="company-name">TravelAWay</span>
+    </div>
+    <div class="right">
+      <nav class="nav-links">
+        <img src="assets/homeIcon.png" alt="Home" class="home-icon" routerLink="/home">
+        <a routerLink="/destinations" routerLinkActive="active">Destinations</a>
+        <a routerLink="/packagetours" routerLinkActive="active">Package Tours</a>
+        <a routerLink="/countrySelection" routerLinkActive="active">Hotels</a>
+      </nav>
+      <button *ngIf = "!isLoggedIn && showLoginButton" class="login-button" [routerLink]="['/login']" (click)="navigateToLogin()">Login</button>
+      <button (click)="logout()" class="logout-button" *ngIf = "isLoggedIn">
+      <p class="loggedIn">
+          <img src="assets/loginIcon.png" alt="Login Icon" class="icon-image" />
+          {{ userName }} - Logout
+      </p>
+    </button>
+    </div>
+  </header>
+  

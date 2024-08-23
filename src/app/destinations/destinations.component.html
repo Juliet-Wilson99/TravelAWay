@@ -1,0 +1,68 @@
+<div class = "destinations">
+  <div class="heading">Destinations</div>
+  <div class="destinations-container">
+    <div class="search-bar-container">
+      <input 
+        type="text" 
+        placeholder="Search for a country..." 
+        (input)="onSearch($event)" 
+        [value]="selectedCountry" 
+        list="countries"/>
+      <datalist id="countries">
+        <option *ngFor="let country of countries" [value]="country.name"></option>
+      </datalist>
+    </div>
+
+    <div class="content">
+      <div class="left-side">
+        <h2>Top Destinations this month</h2>
+        <div class="country-list">
+          <ul>
+            <li *ngFor="let country of topCountries" (click)="selectCountry(country)">
+              {{ country.name }}
+            </li>
+          </ul>
+        </div>
+        <br>
+        <div class="note">
+        Click on the country to know more about the best tourist sites.
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="accordion">
+          <div class="image-container">
+            <img *ngFor="let image of images; let i = index" 
+                 [src]="image" 
+                 [class.active]="i === activeImageIndex" 
+                 alt="destination image"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div #countryDetailSection class="country-detail-section">
+      <div *ngIf="selectedTopCountry" class="country-detail">
+        <div class="country-info">
+          <h2 class="heading">{{ selectedTopCountry.name }}</h2>
+          <p>{{ selectedTopCountry.description }}</p>
+          <h3>Best Tourist Spots</h3>
+          <ul>
+            <li *ngFor="let spot of selectedTopCountry.touristSpots">{{ spot }}</li>
+          </ul>
+          <p><strong>Weather : </strong>{{ selectedTopCountry.weather }}</p>
+          <h4 style="margin-bottom: 3px;">What Makes It the Best Place to Visit:</h4>
+          <p style="margin-top: 1px;">{{ selectedTopCountry.bestPlaceInfo }}</p>
+          <button [routerLink]="['/hotels', selectedTopCountry.name]" class="hotels-button">Book Hotels and Rides</button>
+        </div>
+        <!-- [routerLink]="['/hotels', selectedTopCountry.name]"> -->
+        <div class="country-image">
+          <img [src]="selectedTopCountry.imageUrl" alt="{{ selectedTopCountry.name }}">
+        </div>
+      </div>
+      <div *ngIf="selectedCountry && !selectedTopCountry" class="country-error">
+        Sorry, we currently don't have tours available to {{ selectedCountry }}, but we'd love to help you explore other amazing destinations!
+      </div>
+    </div>
+  </div>
+</div>
+

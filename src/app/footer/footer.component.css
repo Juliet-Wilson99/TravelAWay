@@ -1,0 +1,37 @@
+.footer {
+    background-color: #282828;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 10px;
+  }
+  
+  .social-media {
+    margin-bottom: 10px;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .social-media a:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  .company-info {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  p{
+    margin: 5px;
+  }
+  

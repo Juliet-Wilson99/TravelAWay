@@ -1,0 +1,30 @@
+<div class="landing">
+    <h1 class="caption">
+        <span class="small">At TravelAWay,</span><br>
+        <span class="large">Dreams  </span><span style="font-size: larger;">meet</span><span class="large"> Memories</span></h1>
+    <div class="info-table">
+      <div class="table-wrapper-left">
+      <div class="left-side">
+        <p>✈️ Ready to make your travel dreams into beautiful memories? 🌍<br><br>
+          Let us help with your plans. 🗺️<br><br>
+          Sign up now to get custom travel plans made just for you! 📝</p>
+        <button [disabled]="isLoggedIn" routerLink="/login" class="login-button">Login</button>
+        <!-- <button *ngIf= "isLoggedIn" class="login-button" disabled>Login</button> -->
+      </div>
+      </div>
+      <div class="table-wrapper-right">
+      <div class="right-side">
+        <p>
+          🌿 Do you want to enjoy the scenic greenery of nature <br>
+          or the amazing view of city lights? 🌆<br><br>
+          🌅 Do you want to relax and see the sunset at a beachside <br>
+          or hike up a mountain to see the glorious sunrise? 🏞️<br><br>
+          ✨ We have the best places ready for you!
+        </p>
+        <button routerLink="/destinations" class="destinations-button">Explore</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <app-redirection-cards></app-redirection-cards>
+  
