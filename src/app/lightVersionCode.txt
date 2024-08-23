@@ -85,7 +85,6 @@ body {
 
   //landing comp
 
-  /* Make the landing component fill the viewport */
 .landing {
   display: flex;
   flex-direction: column;
@@ -102,7 +101,7 @@ body {
   color: #460946;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Center the caption text */
+  text-align: center;
 }
 
 .large {
@@ -116,21 +115,20 @@ body {
 .info-table {
   display: flex;
   width: 80%;
-  /* max-width: 900px; */
   justify-content: space-between;
 }
 
 .table-wrapper-left {
-  flex: 1; /* Make each table-wrapper take up half of the available space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 3px solid #007bff; /* Highlighted border */;
+  border: 3px solid #007bff; 
   border-color: #320732;
-  transition: border-color 0.3s transform 1s ease; /* Smooth transition for border color changes */
+  transition: border-color 0.3s transform 1s ease; 
   background-image: linear-gradient(rgba(255, 255, 255), rgba(255, 255, 255, 0.6)), url("/assets/signIn.jpg");
   color: #320732;
   margin: 10px;
@@ -144,9 +142,9 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 3px solid #007bff; /* Highlighted border */;
+  border: 3px solid #007bff;
   border-color: #320732;
-  transition: border-color 0.3s transform 2s ease; /* Smooth transition for border color changes */
+  transition: border-color 0.3s transform 2s ease;
   background-image: linear-gradient(rgba(255, 255, 255), rgba(255, 255, 255, 0.6)), url("/assets/explore.jpg");
   color: #320732;
   margin: 10px;
@@ -154,7 +152,7 @@ body {
 
 .table-wrapper-left:hover, .table-wrapper-right:hover{
   border-color: #460946;
-  transform: scale(1.07); /* Increase the size of the box on hover */
+  transform: scale(1.07);
 }
 
 .left-side, .right-side {
@@ -162,7 +160,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Center the text within each side */
+  text-align: center;
 }
 
 p {

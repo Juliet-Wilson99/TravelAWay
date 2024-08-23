@@ -17,7 +17,6 @@ export class LandingComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) {}
   
   ngOnInit() {
-    // Subscribe to the isLoggedIn observable
     this.authService.isLoggedIn$.subscribe((status) => {
       this.isLoggedIn = status;
     });

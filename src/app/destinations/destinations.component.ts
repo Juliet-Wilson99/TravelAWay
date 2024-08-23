@@ -1,7 +1,6 @@
 import { Component, OnInit, inject, ElementRef, ViewChild, OnDestroy  } from '@angular/core';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { json } from 'stream/consumers';
 import { RouterModule } from '@angular/router';
 
 interface Country {
@@ -101,8 +100,6 @@ export class DestinationsComponent implements OnInit, OnDestroy {
     this.selectedTopCountry = null;
     const inputElement = event.target as HTMLInputElement;
     this.selectedCountry = inputElement.value;
-    console.log("inputElement-->"+inputElement);
-    console.log("selectedCountry-->"+this.selectedCountry);
     for (let i = 0; i < 5; i++) {
       if(this.selectedCountry == this.topCountries[i].name){
         this.selectedTopCountry = this.topCountries[i];

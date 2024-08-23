@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(rgba(27, 27, 27, 0.6), rgba(27, 27, 27, 0.5)), url("/assets/login.jpg");
-    /* animation: backgroundAnimation 10s infinite alternate; */
     background-size: cover;
     color: #fff;
   }

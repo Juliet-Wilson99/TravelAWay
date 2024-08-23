@@ -17,10 +17,8 @@ export class HeaderComponent implements OnInit{
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {
-    // Subscribe to the isLoggedIn observable
 
     this.router.events.subscribe(() => {
-      // Check if the current URL is '/login'
       this.showLoginButton = this.router.url !== '/login';
     });
     
@@ -34,7 +32,7 @@ export class HeaderComponent implements OnInit{
   }
   
   navigateToLogin() {
-    this.router.navigate(['/login']); // Programmatic navigation
+    this.router.navigate(['/login']);
   }
 
   navigateToDestinations(){
@@ -42,9 +40,7 @@ export class HeaderComponent implements OnInit{
   }
 
   logout() {
-    // Logic to handle user logout
     this.authService.setLoggedIn(false);
-    // You can also clear user data and redirect to the login page
   }
   
   

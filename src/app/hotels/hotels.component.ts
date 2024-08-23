@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
-// import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-hotels',
@@ -87,20 +86,20 @@ export class HotelsComponent implements OnInit {
     const stars: string[] = [];
     for (let i = 0; i < 5; i++) {
       if (i < rating) {
-        stars.push('&#9733;'); // Filled star
+        stars.push('&#9733;');
       } else {
-        stars.push('&#9734;'); // Empty star
+        stars.push('&#9734;');
       }
     }
     return stars;
   }  
 
   getRandomStarRating(): number {
-    return Math.floor(Math.random() * 5) + 1; // Returns a random star rating between 1 and 5
+    return Math.floor(Math.random() * 5) + 1;
   }
 
   convertToINR(usd: number): number {
-    const exchangeRate = 83; // Example exchange rate, you can update it as needed
+    const exchangeRate = 80;
     return usd * exchangeRate;
   }
 }

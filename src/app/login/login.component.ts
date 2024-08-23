@@ -23,9 +23,6 @@ export class LoginComponent {
     if (this.email === 'travelaway@test.com' && this.password === 'Test') {
       this.authService.setLoggedIn(true);
       this.authService.setUserName("Juliet");
-      console.log("Set Juliet");
-      // alert('Login successful!');
-      // Navigate to the desired page after login
       this.router.navigate(['/home']); 
     } else {
       this.errorflag = true;

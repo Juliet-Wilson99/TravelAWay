@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { provideRouter } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
-import { RedirectionCardsComponent } from './redirection-cards/redirection-cards.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { HotelBookingComponent } from './hotel-booking/hotel-booking.component';
@@ -24,5 +23,5 @@ export const routes: Routes = [
 ];
 
 export const appRoutingProviders = [
-    provideRouter(routes), // Provide routing configuration
+    provideRouter(routes),
   ];

@@ -52,9 +52,8 @@
           <p><strong>Weather : </strong>{{ selectedTopCountry.weather }}</p>
           <h4 style="margin-bottom: 3px;">What Makes It the Best Place to Visit:</h4>
           <p style="margin-top: 1px;">{{ selectedTopCountry.bestPlaceInfo }}</p>
-          <button [routerLink]="['/hotels', selectedTopCountry.name]" class="hotels-button">Book Hotels and Rides</button>
+          <button [routerLink]="['/hotels', selectedTopCountry.name]" class="hotels-button">Book Hotels</button>
         </div>
-        <!-- [routerLink]="['/hotels', selectedTopCountry.name]"> -->
         <div class="country-image">
           <img [src]="selectedTopCountry.imageUrl" alt="{{ selectedTopCountry.name }}">
         </div>

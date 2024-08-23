@@ -26,7 +26,7 @@ export class AppComponent {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.router.events.subscribe((event) => {
-      if (this.router.url !== '/') { // Assuming the main view is at root path
+      if (this.router.url !== '/home') {
         this.showAdditionalComponents = false;
       } else {
         this.showAdditionalComponents = true;
