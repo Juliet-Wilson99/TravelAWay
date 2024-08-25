@@ -1,9 +1,7 @@
 body {
     background-image: linear-gradient(rgba(41, 41, 41, 0.6), rgba(41, 41, 41, 0.5)), url("/assets/bg.jpg");
     background-size: cover;
-    /* background-blend-mode: lighten; */
     background-attachment: scroll;
     margin: 0%;
-    /* font-family: "Roboto", sans-serif; */
 }
 
