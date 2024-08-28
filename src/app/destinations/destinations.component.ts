@@ -80,7 +80,7 @@ export class DestinationsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.fetchCountries();
-    this.startImageRotation();
+    // this.startImageRotation();
   }
 
   fetchCountries() {
@@ -112,10 +112,20 @@ export class DestinationsComponent implements OnInit, OnDestroy {
   }
 
   startImageRotation() {
+    this.clearImageRotation();
     this.interval = setInterval(() => {
-      this.activeImageIndex =
-        (this.activeImageIndex + 1) % this.images.length;
+      if (this.images.length) {
+        this.activeImageIndex =
+          (this.activeImageIndex + 1) % this.images.length;
+      }
     }, 5000);
+  }
+
+  clearImageRotation() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
   }
 
 
@@ -131,8 +141,8 @@ export class DestinationsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.clearImageRotation();
     if (this.subscription) {
-      clearInterval(this.interval);
       this.subscription.unsubscribe();
     }
   }
